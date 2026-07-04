@@ -1,0 +1,52 @@
+.stories {
+  display: grid;
+  gap: 24px;
+}
+
+.stories__header {
+  max-width: 680px;
+}
+
+.stories__eyebrow {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.stories__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.stories__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  padding-bottom: 24px;
+}
+
+.stories__card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.stories__card q {
+  display: block;
+  margin: 22px 24px 18px;
+  color: var(--text-soft);
+}
+
+.stories__card strong {
+  display: block;
+  margin: 0 24px;
+  padding-bottom: 2px;
+  line-height: 1.4;
+}

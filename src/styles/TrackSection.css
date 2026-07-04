@@ -1,0 +1,147 @@
+.track {
+  display: grid;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.track__intro {
+  max-width: 680px;
+}
+
+.track__eyebrow {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.track__map {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.85fr);
+}
+
+.track__map-frame {
+  display: grid;
+  gap: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 460px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.24);
+}
+
+.track__map-frame iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.track__map-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.96);
+}
+
+.track__map-details strong {
+  color: var(--text-inverse);
+  display: block;
+}
+
+.track__map-details p {
+  margin: 6px 0 0;
+  color: var(--text-soft);
+  max-width: 520px;
+}
+
+.track__map-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--accent-gold);
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.track__map-action:hover {
+  transform: translateY(-1px);
+  background: rgba(212, 175, 55, 0.2);
+}
+
+.track__locations {
+  display: grid;
+  gap: 16px;
+}
+
+.track__location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  color: var(--text-inverse);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.track__location:hover,
+.track__location--active {
+  transform: translateX(2px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.track__location strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.track__location small {
+  display: block;
+  color: var(--text-soft);
+}
+
+.track__location span {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .track__map {
+    grid-template-columns: 1fr;
+  }
+
+  .track__map-frame {
+    min-height: 320px;
+  }
+
+  .track__map-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track__map-details p {
+    max-width: 100%;
+  }
+
+  .track__location {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+}

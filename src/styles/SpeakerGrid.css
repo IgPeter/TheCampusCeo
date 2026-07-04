@@ -1,0 +1,30 @@
+.speaker-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.speaker-card {
+  padding: 20px;
+  background: rgba(248, 250, 252, 0.08);
+  border-radius: 28px;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.speaker-card strong {
+  display: block;
+}
+
+.speaker-card span {
+  color: var(--text-soft);
+}
